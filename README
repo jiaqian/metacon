@@ -1,0 +1,63 @@
+Welcome to use MetaCon (binning metagenomic contigs by composition matrix and coverage matrix)!
+===================
+
+Metacon is an easy, but effective method, it utilizes the composition and coverage matrices to compose the contigs feature matrix. In addition, it normalizes the two matrices independently and then feed them into the k-medoids in order to obtain well-generated clusters in the first-stage, and finally assign the short contigs to the closest cluster centroid during the second-stage.
+
+Matlab (version R2017b)
+============
+----------
+Description
+---------------
+This package contains the following files.
+
+	test_strain.m -> a demo on simulated 'strain' dataset
+	permn.m -> generation of k-mers
+	precision_recall_computing -> compute the precision and recall, defined in [1]
+        data -> it contains the strain, species, sharon data set
+        fastkmeans -> a fast method to compute k-means
+        cal_number_cluster -> method to estimate the number of clusters
+
+
+Please try to execute 'test_strain.m' to learn how to use this software.
+***Note: this method is developed under MATLAB R2017b, and we used some built-in functions, if you have the different version, it may arouse some problems.
+
+----------
+Preprocessing
+---------------
+
+The preprocessing steps aim to extract coverage profile and sequence composition profile as input to our program, which can be tackled by CONCOCT [2], you can find all the details there.
+
+
+
+----------
+Contacts and bug reports
+------------------------
+Please send bug reports, comments, or questions to 
+
+Jia Qian: lainey.qian@gmail.com
+
+Prof. Matteo Comin: comin@dei.unipd.it
+
+
+----------
+Copyright and License Information
+---------------------------------
+Copyright (C) 2018 University of Padova
+
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+
+----------
+References
+---------------------------------
+[1] Vinh, L.V. et al. A two-phase binning algorithm using l-mer frequency on groups of non-overlapping reads. Algorithms Mod. Biol.,10, 1-12 (2015)
+[2] Alneberg, J., Bjarnason, B.S., et al. Binning metagenomic contigs by coverage and composition. Nature Methods 11(11), 1144-1146 (2014)
+Last update: 29-Mar-2018
